@@ -1,0 +1,42 @@
+.crumbs-g {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: -36px;
+}
+
+.crumbs-g__i {
+    margin: 2px 36px 2px 0;
+}
+
+.crumb {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ADB1B6;
+    text-transform: uppercase;
+}
+
+.crumb__arrow {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 8px;
+    pointer-events: none;
+}
+
+.crumb__arrow svg {
+    fill: $black;
+}
+
+.crumbs-g__i:nth-last-child(2) .crumb__arrow svg {
+    fill: $gray;
+}
+
+.crumb_active {
+    color: $blue;
+    pointer-events: none;
+}

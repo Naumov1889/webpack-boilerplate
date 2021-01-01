@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url('../../fonts/MyriadPro-Regular.eot');
+    src: url('../../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/MyriadPro-Regular.woff') format('woff'),
+    url('../../fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+    color: $black2;
+
+    &_h1 { /* 52 61 */
+        font-size: 3.25rem;
+        line-height: 1.173;
+        font-weight: 700;
+    }
+
+    &_h2 { /* 48 56 */
+        font-size: 3rem;
+        line-height: 1.16;
+        font-weight: 500;
+    }
+
+    &_h3 { /* 38 45 */
+        font-size: 2.375rem;
+        line-height: 1.184;
+    }
+
+    &_h4 { /* 32 37 */
+        font-size: 2rem;
+        line-height: 1.156;
+    }
+
+    &_h5 { /* 26 30 */
+        font-size: 1.625rem;
+        line-height: 1.1538;
+    }
+
+    &_h6 { /* 22 24 */
+        font-size: 1.375rem;
+        line-height: 1.09;
+    }
+}
+
+.text {
+    strong {
+        font-weight: bold;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    a {
+        color: $blue;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &_center {
+        text-align: center;
+    }
+
+    &_left {
+        text-align: left;
+    }
+
+    &_right {
+        text-align: right;
+    }
+
+    &_up {
+        text-transform: uppercase;
+    }
+
+    &_black2 {
+        color: $black2;
+    }
+
+    &_red {
+        color: $red;
+    }
+
+    &_blue {
+        color: $blue;
+    }
+
+    &_gray {
+        color: $gray;
+    }
+
+    &_gray3 {
+        color: $gray3;
+    }
+
+    &_300 {
+        font-weight: 300;
+    }
+
+    &_400 {
+        font-weight: 400;
+    }
+
+    &_500 {
+        font-weight: 500;
+    }
+
+    &_700 {
+        font-weight: 700;
+    }
+
+    &_14-16 {
+        font-size: 0.875rem;
+        line-height: 1.14;
+    }
+
+    &_16-22 {
+        font-size: 1rem;
+        line-height: 1.375;
+    }
+
+    &_17-26 {
+        font-size: 1.0625rem;
+        line-height: 1.53;
+
+        h3 {
+            margin-bottom: 0.625rem;
+            font-size: 1.375rem; /* 22 */
+        }
+    }
+
+    &_17-24 {
+        font-size: 1.0625rem;
+        line-height: 1.4;
+
+        h3 {
+            margin-bottom: 0.625rem;
+            font-size: 1.375rem; /* 22 */
+        }
+    }
+
+    &_18-24 {
+        font-size: 1.125rem;
+        line-height: 1.3;
+
+        h3 {
+            font-size: 1.375rem;
+        }
+    }
+
+    &_18-26 {
+        font-size: 1.125rem;
+        line-height: 1.44;
+    }
+
+    &_20_23 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    &_22_32 {
+        font-size: 1.375rem;
+        line-height: 1.45;
+    }
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+
+    ul ul, ol ul {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin-left: 15px;
+    }
+
+    ol ol, ul ol {
+        list-style-type: lower-latin;
+        list-style-position: inside;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: $notebook) {
+    .title {
+
+        &_h1 { /* 38 45 */
+            font-size: 2.375rem;
+            line-height: 1.18;
+            font-weight: 500;
+        }
+
+        &_h2 { /* 38 45 */
+            font-size: 2.375rem;
+            line-height: 1.18;
+        }
+
+        &_h3 { /* 32 37 */
+            font-size: 2rem;
+            line-height: 1.156;
+        }
+    }
+
+    .text {
+        &_18-24 { /* 16 20 */
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .title {
+        &_h1 { /* 32 37 */
+            font-size: 2rem;
+            line-height: 1.156;
+        }
+
+        &_h2 { /* 30 35 */
+            font-size: 1.875rem;
+            line-height: 1.166;
+        }
+
+        &_h3 { /* 28 33 */
+            font-size: 1.75rem;
+            line-height: 1.178;
+        }
+    }
+
+    .text {
+        &_18-24 { /* 14 16 */
+            font-size: 0.875rem;
+            line-height: 1.14;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .title {
+        &_h1 { /* 28 32 */
+            font-size: 1.86rem;
+            line-height: 1.14;
+        }
+
+        &_h2 { /* 28 32 */
+            font-size: 1.86rem;
+            line-height: 1.14;
+        }
+
+        &_h3 { /* 18 24 */
+            font-size: 1.2rem;
+            line-height: 1.33;
+        }
+
+        &_h4 { /* 22 26 */
+            font-size: 1.46rem;
+            line-height: 1.18;
+        }
+    }
+
+    .text {
+        &_14_16 { /* 12 14 */
+            font-size: 0.8rem;
+            line-height: 1.166;
+        }
+
+        &_17-24 {
+            font-size: 1rem;
+            line-height: 1.33;
+
+            h3 {
+                font-size: 1.2rem;
+                line-height: 1.33;
+            }
+        }
+
+        &_18-24 { /* 14 16 */
+            font-size: 0.875rem;
+            line-height: 1.14;
+        }
+
+        &_20_23 {
+            font-size: 1.066rem;
+            line-height: 1.187;
+        }
+    }
+}

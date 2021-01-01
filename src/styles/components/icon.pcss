@@ -1,0 +1,22 @@
+.icon {
+    &_upload {
+        display: inline-block;
+        min-width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: $blue url("../images/icons/icon-upload.svg") no-repeat center;
+        background-size: 14px 17px;
+        box-shadow: $shadow2;
+    }
+}
+
+@media (max-width: $mobile) {
+    .icon {
+        &_upload {
+            min-width: 36px;
+            height: 36px;
+            background-size: 12px 14px;
+        }
+    }
+
+}

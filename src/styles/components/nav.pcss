@@ -1,0 +1,40 @@
+.nav {
+    display: flex;
+    margin: 0 -10px;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: $notebook) {
+    .nav {
+        &__item {
+            font-size: 1rem; /* 16 */
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        margin: 0 -8px;
+        &__item {
+            padding: 8px;
+            font-size: 0.9375rem; /* 15 */
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .nav {
+        margin: 0 -7px;
+        &__item {
+            padding: 7px;
+            font-size: 0.875rem; /* 14 */
+        }
+    }
+}

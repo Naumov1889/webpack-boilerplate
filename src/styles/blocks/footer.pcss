@@ -1,0 +1,132 @@
+.footer {
+    background: #383A43;
+    color: $gray2;
+
+    &__container {
+        padding-top: 51px;
+        padding-bottom: 47px;
+    }
+
+    &__logo {
+        margin-right: 30px;
+    }
+
+    &__first-row {
+        display: flex;
+    }
+
+    &__copyright {
+        margin-top: 100px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: $gray;
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    &__img {
+        width: 57px;
+        height: 57px;
+    }
+
+    &__text {
+        margin-left: 10px;
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+    }
+}
+
+.footer-nav {
+    margin-right: -22px;
+
+    &__item {
+        padding: 10px 22px;
+        font-size: 16px;
+
+        &:hover {
+            color: #9599a1;
+        }
+
+        &_active {
+            font-weight: bold;
+            color: #9599a1 !important;
+        }
+    }
+}
+
+@media (max-width: $notebook) {
+    .footer {
+        &__copyright {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .footer {
+        &__container {
+            padding-top: 40px;
+        }
+    }
+
+    .footer {
+        &__copyright {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-logo {
+        &__img {
+            width: 35px;
+            height: 35px;
+        }
+
+        &__text {
+            margin-left: 7px;
+            font-size: 10px;
+            line-height: 13px;
+            color: $white;
+        }
+    }
+
+    .footer-nav {
+
+        &__item {
+            font-size: 0.8rem; /*12 14*/
+            line-height: 1.166;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .footer {
+        &__container {
+            padding-top: 21px;
+            padding-bottom: 20px;
+        }
+
+        &__first-row {
+            align-items: flex-start;
+        }
+
+        &__copyright {
+            margin-top: 23px;
+            font-size: 0.8rem;
+            line-height: 1.166;
+        }
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__item {
+            padding: 5px;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+doctype html
+html(lang="ru-Ru" class="no-js")
+    head
+        <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|s)no-js(s|$)/,"$1js$2")})(document,window,0);</script>
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        block title
+            -let title = "3-doz"
+            -let page = ''
+        title #{title + (page.length ? " - " : "") + (typeof page === 'string' ? page : page[page.length - 1])}
+
+        link(rel="shortcut icon" type="image/png" href="./images/logos/favicon.png")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet")
+        <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+        link(href="https://cdn.jsdelivr.net/npm/slim-select@1.26.1/dist/slimselect.min.css" rel="stylesheet")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" rel="stylesheet")
+
+    body
+        .header-n-content-wrap
+            block header
+                header.header
+                    .header__container.container.flex
+                        a.logo(href="index.html")
+                            .logo__img.svg-wrap <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9284 19.0564C11.3507 19.0564 0.34375 29.9479 0.34375 43.3834C0.34375 56.8188 11.3507 67.7104 24.9284 67.7104C38.5062 67.7104 49.5131 56.8188 49.5131 43.3834C49.5131 29.9479 38.5062 19.0564 24.9284 19.0564ZM24.9284 59.5265C15.9184 59.5265 8.61434 52.299 8.61434 43.3834C8.61434 34.4678 15.9184 27.2403 24.9284 27.2403C33.9385 27.2403 41.2425 34.4678 41.2425 43.3834C41.2425 52.299 33.9385 59.5265 24.9284 59.5265Z" fill="white"/><path d="M11.5595 34.788C11.5595 34.5438 11.5701 34.3022 11.5781 34.0601C9.69103 36.6939 8.57812 39.9089 8.57812 43.3833C8.57812 52.2989 15.8822 59.5264 24.8922 59.5264C28.2878 59.5264 31.4403 58.4992 34.0515 56.7427C33.9523 56.7441 33.8541 56.7501 33.7545 56.7501C21.4964 56.7501 11.5595 46.9175 11.5595 34.788Z" fill="white"/><path d="M63.9718 34.7879C63.9718 17.3087 49.6521 3.13892 31.9885 3.13892C21.1684 3.13892 11.615 8.4635 5.82716 16.5995C2.34729 21.8206 0.308594 28.0656 0.308594 34.7879C0.308594 36.3593 0.42425 37.9031 0.639348 39.4154C2.12489 30.4589 8.55179 23.154 17.0603 20.3248C21.1285 15.7305 27.0974 12.8256 33.7556 12.8256C46.0136 12.8256 55.9505 22.6582 55.9505 34.7879C55.9505 41.5329 52.875 47.5644 48.039 51.5933C45.5146 58.5603 39.8695 64.0514 32.7706 66.4268C50.0728 66.0158 63.9718 52.008 63.9718 34.7879Z" fill="white"/><path d="M24.8922 27.2401C33.9022 27.2401 41.2063 34.4676 41.2063 43.3832C41.2063 48.9389 38.3694 53.8382 34.0516 56.7425C39.3768 56.673 44.2481 54.7504 48.0379 51.5932C48.9674 49.028 49.4769 46.2647 49.4769 43.3832C49.4769 29.9476 38.4701 19.0562 24.8922 19.0562C22.1525 19.0562 19.5203 19.5063 17.0593 20.3247C13.7886 24.0185 11.7515 28.8046 11.5781 34.0599C14.5337 29.9349 19.3934 27.2401 24.8922 27.2401Z" fill="white"/><path d="M5.82788 52.9779C3.16081 48.977 1.34469 44.3733 0.639348 39.4155C0.425141 40.7074 0.308594 42.0315 0.308594 43.3834C0.308594 56.8189 11.3156 67.7104 24.8933 67.7104C27.6496 67.7104 30.2969 67.2547 32.7706 66.427C32.5106 66.4331 32.2499 66.4368 31.9885 66.4368C21.1696 66.4368 11.6163 61.1131 5.82788 52.9779Z" fill="white"/><path d="M40.9845 40.9422C39.1443 45.8021 34.409 49.2625 28.8551 49.2625C21.7027 49.2625 15.9046 43.5251 15.9046 36.4478C15.9046 33.4 16.9816 30.6025 18.7773 28.4028C14.3946 30.146 10.9557 33.7153 9.41992 38.1606C10.2965 48.023 18.6605 55.759 28.8551 55.759C31.8552 55.759 34.6962 55.0875 37.2357 53.8907C39.6861 51.0664 41.1702 47.3975 41.1702 43.3833C41.1702 42.5534 41.1066 41.7384 40.9845 40.9422Z" fill="white"/><path d="M24.8562 19.0563C35.9272 19.0563 45.2867 26.2984 48.3661 36.2553C48.2611 25.6791 39.5681 17.1365 28.8552 17.1365C25.2898 17.1365 21.9507 18.0871 19.0742 19.7394C20.9292 19.2968 22.8638 19.0563 24.8562 19.0563Z" fill="white"/><path d="M35.0136 0.202393C24.2809 0.202393 14.6836 4.99264 8.27335 12.5271C7.37371 13.5845 7.6438 13.3911 8.70338 12.2642C14.8041 5.7763 23.5039 1.71523 33.1667 1.71523C51.6254 1.71523 66.5895 16.5224 66.5895 34.7877C66.5895 53.0531 51.6254 67.8604 33.1667 67.8604C23.5071 67.8604 14.8094 63.8018 8.70874 57.3171C8.49611 57.0911 8.35118 57.142 8.55788 57.3789C14.9658 64.7227 24.4386 69.3732 35.0136 69.3732C54.3169 69.3732 69.9653 53.8887 69.9653 34.7877C69.9653 15.6867 54.3169 0.202393 35.0136 0.202393Z" fill="white"/><path d="M24.8933 19.0564C11.3155 19.0564 0.308594 29.9479 0.308594 43.3834C0.308594 56.8188 11.3155 67.7104 24.8933 67.7104C38.471 67.7104 49.478 56.8188 49.478 43.3834C49.478 29.9479 38.471 19.0564 24.8933 19.0564ZM24.8933 59.5265C15.8832 59.5265 8.57918 52.299 8.57918 43.3834C8.57918 34.4678 15.8832 27.2403 24.8933 27.2403C33.9033 27.2403 41.2074 34.4678 41.2074 43.3834C41.2074 52.299 33.9033 59.5265 24.8933 59.5265Z" fill="url(#paint0_linear)"/><path d="M28.8928 17.1365C18.1145 17.1365 9.37695 25.7824 9.37695 36.4478C9.37695 47.1131 18.1145 55.7591 28.8928 55.7591C39.6712 55.7591 48.4087 47.1131 48.4087 36.4478C48.4087 25.7824 39.6712 17.1365 28.8928 17.1365ZM28.8928 49.2625C21.7405 49.2625 15.9423 43.5252 15.9423 36.4478C15.9423 29.3704 21.7405 23.633 28.8928 23.633C36.0452 23.633 41.8433 29.3704 41.8433 36.4478C41.8433 43.5252 36.0452 49.2625 28.8928 49.2625Z" fill="url(#paint1_linear)"/><path d="M35.0136 0.202393C24.2809 0.202393 14.6836 4.99264 8.27335 12.5271C7.37371 13.5845 7.6438 13.3911 8.70338 12.2642C14.8041 5.7763 23.5039 1.71523 33.1667 1.71523C51.6254 1.71523 66.5895 16.5224 66.5895 34.7877C66.5895 53.0531 51.6254 67.8604 33.1667 67.8604C23.5071 67.8604 14.8094 63.8018 8.70874 57.3171C8.49611 57.0911 8.35118 57.142 8.55788 57.3789C14.9658 64.7227 24.4386 69.3732 35.0136 69.3732C54.3169 69.3732 69.9653 53.8887 69.9653 34.7877C69.9653 15.6867 54.3169 0.202393 35.0136 0.202393Z" fill="url(#paint2_linear)"/><path d="M31.9885 66.4366C49.6521 66.4366 63.9719 52.2669 63.9719 34.7878C63.9719 17.3086 49.6521 3.13892 31.9885 3.13892C21.1684 3.13892 11.615 8.46347 5.82728 16.5994C2.34734 21.8206 0.308594 28.0656 0.308594 34.7878C0.308594 41.5109 2.34734 47.7565 5.82792 52.9777C11.6163 61.113 21.1697 66.4366 31.9885 66.4366ZM33.7556 12.8255C46.0137 12.8255 55.9505 22.6582 55.9505 34.7878C55.9505 46.9173 46.0137 56.75 33.7556 56.75C21.4975 56.75 11.5607 46.9173 11.5607 34.7878C11.5607 22.6582 21.4975 12.8255 33.7556 12.8255Z" fill="url(#paint3_linear)"/><defs><linearGradient id="paint0_linear" x1="7.50927" y1="60.5852" x2="41.9109" y2="25.8191" gradientUnits="userSpaceOnUse"><stop stop-color="#BF3536" stop-opacity="0.7"/><stop offset="0.466321" stop-color="#2E438F" stop-opacity="0.8"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.7"/></linearGradient><linearGradient id="paint1_linear" x1="38.6524" y1="19.7209" x2="19.4401" y2="53.35" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF48C" stop-opacity="0.7"/><stop offset="0.297927" stop-color="#BF3536" stop-opacity="0.7"/><stop offset="0.720207" stop-color="#2E438F" stop-opacity="0.6"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.6"/></linearGradient><linearGradient id="paint2_linear" x1="17.8042" y1="4.68153" x2="52.2102" y2="64.9058" gradientUnits="userSpaceOnUse"><stop stop-color="#E5B317" stop-opacity="0.8"/><stop offset="0.370466" stop-color="#BB0F1D" stop-opacity="0.7"/><stop offset="0.673575" stop-color="#2E438F" stop-opacity="0.7"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.7"/></linearGradient><linearGradient id="paint3_linear" x1="16.033" y1="62.2154" x2="47.5159" y2="7.10779" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF7B0" stop-opacity="0.8"/><stop offset="0.220207" stop-color="#E5B317" stop-opacity="0.9"/><stop offset="0.437824" stop-color="#862739" stop-opacity="0.7"/><stop offset="0.735751" stop-color="#332B7F" stop-opacity="0.7"/><stop offset="1" stop-color="#009BDE" stop-opacity="0.7"/></linearGradient></defs></svg>
+
+                            .logo__text РАДИОЛОГИЯ <br> МОСКВЫ
+
+                        nav.header-nav.nav.header__nav.right(data-js="header-hav")
+                            a(class="nav__item header-nav__item header-nav__item_active" href="index.html") Главная
+                            a(class="nav__item header-nav__item" href="") ргп
+                            a(class="nav__item header-nav__item" href="faq-1-doz.html") 1-ДОЗ
+                            a(class="nav__item header-nav__item" href="") 3-ДОЗ
+                            a(class="nav__item header-nav__item" href="contact.html") контакты
+                            a(class="nav__item header-nav__item" href="") форма обратной связи
+                            //a(class="nav__item header-nav__item header-user" href="sign-up-in.html") войти
+                            div(class="nav__item header-nav__item header-nav__item_active header-user" data-js="tooltip-trigger")
+                                span.header-user__text админ
+                                span.header-user__icon.svg-wrap <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.61981 6.64857C5.42631 6.92567 5.01934 6.93495 4.8134 6.66696L0.815487 1.46432C0.56279 1.13547 0.797229 0.659661 1.21195 0.659661L8.84288 0.65966C9.24713 0.65966 9.48427 1.11448 9.25282 1.44592L5.61981 6.64857Z" fill="#2158AD"/></svg>
+
+                                .tooltip-content(data-js="tooltip-content")
+                                    .tooltip-content__content
+                                        nav.tooltip-nav-g
+                                            a.tooltip-nav-g__i(href="") Сдать отчёт
+                                            a.tooltip-nav-g__i(href="") Заказать консультативную услугу
+                                            a.tooltip-nav-g__i(href="") Редактировать профиль
+                                        a.tooltip-content__btn(href="") Выйти
+
+
+                        //a.right(class="nav__item header-nav__item header-user" href="sign-up-in.html") войти
+                        div(class="right nav__item header-nav__item header-nav__item_active header-user" data-js="tooltip-trigger")
+                            span.header-user__text админ
+                            span.header-user__icon.svg-wrap <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.61981 6.64857C5.42631 6.92567 5.01934 6.93495 4.8134 6.66696L0.815487 1.46432C0.56279 1.13547 0.797229 0.659661 1.21195 0.659661L8.84288 0.65966C9.24713 0.65966 9.48427 1.11448 9.25282 1.44592L5.61981 6.64857Z" fill="#2158AD"/></svg>
+                            .tooltip-content(data-js="tooltip-content")
+                                .tooltip-content__content
+                                    nav.tooltip-nav-g
+                                        a.tooltip-nav-g__i(href="") Сдать отчёт
+                                        a.tooltip-nav-g__i(href="") Заказать консультативную услугу
+                                        a.tooltip-nav-g__i(href="") Редактировать профиль
+                                    a.tooltip-content__btn(href="") Выйти
+
+                        .header-burger(data-js="header-burger")
+                            .burger(data-js="burger")
+                                i
+
+            block content
+
+        block footer
+            footer.footer
+                .footer__container.container
+                    .footer__first-row
+                        a.logo.footer-logo(href="index.html")
+                            .logo__img.footer-logo__img.svg-wrap <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9284 19.0564C11.3507 19.0564 0.34375 29.9479 0.34375 43.3834C0.34375 56.8188 11.3507 67.7104 24.9284 67.7104C38.5062 67.7104 49.5131 56.8188 49.5131 43.3834C49.5131 29.9479 38.5062 19.0564 24.9284 19.0564ZM24.9284 59.5265C15.9184 59.5265 8.61434 52.299 8.61434 43.3834C8.61434 34.4678 15.9184 27.2403 24.9284 27.2403C33.9385 27.2403 41.2425 34.4678 41.2425 43.3834C41.2425 52.299 33.9385 59.5265 24.9284 59.5265Z" fill="white"/><path d="M11.5595 34.788C11.5595 34.5438 11.5701 34.3022 11.5781 34.0601C9.69103 36.6939 8.57812 39.9089 8.57812 43.3833C8.57812 52.2989 15.8822 59.5264 24.8922 59.5264C28.2878 59.5264 31.4403 58.4992 34.0515 56.7427C33.9523 56.7441 33.8541 56.7501 33.7545 56.7501C21.4964 56.7501 11.5595 46.9175 11.5595 34.788Z" fill="white"/><path d="M63.9718 34.7879C63.9718 17.3087 49.6521 3.13892 31.9885 3.13892C21.1684 3.13892 11.615 8.4635 5.82716 16.5995C2.34729 21.8206 0.308594 28.0656 0.308594 34.7879C0.308594 36.3593 0.42425 37.9031 0.639348 39.4154C2.12489 30.4589 8.55179 23.154 17.0603 20.3248C21.1285 15.7305 27.0974 12.8256 33.7556 12.8256C46.0136 12.8256 55.9505 22.6582 55.9505 34.7879C55.9505 41.5329 52.875 47.5644 48.039 51.5933C45.5146 58.5603 39.8695 64.0514 32.7706 66.4268C50.0728 66.0158 63.9718 52.008 63.9718 34.7879Z" fill="white"/><path d="M24.8922 27.2401C33.9022 27.2401 41.2063 34.4676 41.2063 43.3832C41.2063 48.9389 38.3694 53.8382 34.0516 56.7425C39.3768 56.673 44.2481 54.7504 48.0379 51.5932C48.9674 49.028 49.4769 46.2647 49.4769 43.3832C49.4769 29.9476 38.4701 19.0562 24.8922 19.0562C22.1525 19.0562 19.5203 19.5063 17.0593 20.3247C13.7886 24.0185 11.7515 28.8046 11.5781 34.0599C14.5337 29.9349 19.3934 27.2401 24.8922 27.2401Z" fill="white"/><path d="M5.82788 52.9779C3.16081 48.977 1.34469 44.3733 0.639348 39.4155C0.425141 40.7074 0.308594 42.0315 0.308594 43.3834C0.308594 56.8189 11.3156 67.7104 24.8933 67.7104C27.6496 67.7104 30.2969 67.2547 32.7706 66.427C32.5106 66.4331 32.2499 66.4368 31.9885 66.4368C21.1696 66.4368 11.6163 61.1131 5.82788 52.9779Z" fill="white"/><path d="M40.9845 40.9422C39.1443 45.8021 34.409 49.2625 28.8551 49.2625C21.7027 49.2625 15.9046 43.5251 15.9046 36.4478C15.9046 33.4 16.9816 30.6025 18.7773 28.4028C14.3946 30.146 10.9557 33.7153 9.41992 38.1606C10.2965 48.023 18.6605 55.759 28.8551 55.759C31.8552 55.759 34.6962 55.0875 37.2357 53.8907C39.6861 51.0664 41.1702 47.3975 41.1702 43.3833C41.1702 42.5534 41.1066 41.7384 40.9845 40.9422Z" fill="white"/><path d="M24.8562 19.0563C35.9272 19.0563 45.2867 26.2984 48.3661 36.2553C48.2611 25.6791 39.5681 17.1365 28.8552 17.1365C25.2898 17.1365 21.9507 18.0871 19.0742 19.7394C20.9292 19.2968 22.8638 19.0563 24.8562 19.0563Z" fill="white"/><path d="M35.0136 0.202393C24.2809 0.202393 14.6836 4.99264 8.27335 12.5271C7.37371 13.5845 7.6438 13.3911 8.70338 12.2642C14.8041 5.7763 23.5039 1.71523 33.1667 1.71523C51.6254 1.71523 66.5895 16.5224 66.5895 34.7877C66.5895 53.0531 51.6254 67.8604 33.1667 67.8604C23.5071 67.8604 14.8094 63.8018 8.70874 57.3171C8.49611 57.0911 8.35118 57.142 8.55788 57.3789C14.9658 64.7227 24.4386 69.3732 35.0136 69.3732C54.3169 69.3732 69.9653 53.8887 69.9653 34.7877C69.9653 15.6867 54.3169 0.202393 35.0136 0.202393Z" fill="white"/><path d="M24.8933 19.0564C11.3155 19.0564 0.308594 29.9479 0.308594 43.3834C0.308594 56.8188 11.3155 67.7104 24.8933 67.7104C38.471 67.7104 49.478 56.8188 49.478 43.3834C49.478 29.9479 38.471 19.0564 24.8933 19.0564ZM24.8933 59.5265C15.8832 59.5265 8.57918 52.299 8.57918 43.3834C8.57918 34.4678 15.8832 27.2403 24.8933 27.2403C33.9033 27.2403 41.2074 34.4678 41.2074 43.3834C41.2074 52.299 33.9033 59.5265 24.8933 59.5265Z" fill="url(#paint0_linear)"/><path d="M28.8928 17.1365C18.1145 17.1365 9.37695 25.7824 9.37695 36.4478C9.37695 47.1131 18.1145 55.7591 28.8928 55.7591C39.6712 55.7591 48.4087 47.1131 48.4087 36.4478C48.4087 25.7824 39.6712 17.1365 28.8928 17.1365ZM28.8928 49.2625C21.7405 49.2625 15.9423 43.5252 15.9423 36.4478C15.9423 29.3704 21.7405 23.633 28.8928 23.633C36.0452 23.633 41.8433 29.3704 41.8433 36.4478C41.8433 43.5252 36.0452 49.2625 28.8928 49.2625Z" fill="url(#paint1_linear)"/><path d="M35.0136 0.202393C24.2809 0.202393 14.6836 4.99264 8.27335 12.5271C7.37371 13.5845 7.6438 13.3911 8.70338 12.2642C14.8041 5.7763 23.5039 1.71523 33.1667 1.71523C51.6254 1.71523 66.5895 16.5224 66.5895 34.7877C66.5895 53.0531 51.6254 67.8604 33.1667 67.8604C23.5071 67.8604 14.8094 63.8018 8.70874 57.3171C8.49611 57.0911 8.35118 57.142 8.55788 57.3789C14.9658 64.7227 24.4386 69.3732 35.0136 69.3732C54.3169 69.3732 69.9653 53.8887 69.9653 34.7877C69.9653 15.6867 54.3169 0.202393 35.0136 0.202393Z" fill="url(#paint2_linear)"/><path d="M31.9885 66.4366C49.6521 66.4366 63.9719 52.2669 63.9719 34.7878C63.9719 17.3086 49.6521 3.13892 31.9885 3.13892C21.1684 3.13892 11.615 8.46347 5.82728 16.5994C2.34734 21.8206 0.308594 28.0656 0.308594 34.7878C0.308594 41.5109 2.34734 47.7565 5.82792 52.9777C11.6163 61.113 21.1697 66.4366 31.9885 66.4366ZM33.7556 12.8255C46.0137 12.8255 55.9505 22.6582 55.9505 34.7878C55.9505 46.9173 46.0137 56.75 33.7556 56.75C21.4975 56.75 11.5607 46.9173 11.5607 34.7878C11.5607 22.6582 21.4975 12.8255 33.7556 12.8255Z" fill="url(#paint3_linear)"/><defs><linearGradient id="paint0_linear" x1="7.50927" y1="60.5852" x2="41.9109" y2="25.8191" gradientUnits="userSpaceOnUse"><stop stop-color="#BF3536" stop-opacity="0.7"/><stop offset="0.466321" stop-color="#2E438F" stop-opacity="0.8"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.7"/></linearGradient><linearGradient id="paint1_linear" x1="38.6524" y1="19.7209" x2="19.4401" y2="53.35" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF48C" stop-opacity="0.7"/><stop offset="0.297927" stop-color="#BF3536" stop-opacity="0.7"/><stop offset="0.720207" stop-color="#2E438F" stop-opacity="0.6"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.6"/></linearGradient><linearGradient id="paint2_linear" x1="17.8042" y1="4.68153" x2="52.2102" y2="64.9058" gradientUnits="userSpaceOnUse"><stop stop-color="#E5B317" stop-opacity="0.8"/><stop offset="0.370466" stop-color="#BB0F1D" stop-opacity="0.7"/><stop offset="0.673575" stop-color="#2E438F" stop-opacity="0.7"/><stop offset="1" stop-color="#008ACE" stop-opacity="0.7"/></linearGradient><linearGradient id="paint3_linear" x1="16.033" y1="62.2154" x2="47.5159" y2="7.10779" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF7B0" stop-opacity="0.8"/><stop offset="0.220207" stop-color="#E5B317" stop-opacity="0.9"/><stop offset="0.437824" stop-color="#862739" stop-opacity="0.7"/><stop offset="0.735751" stop-color="#332B7F" stop-opacity="0.7"/><stop offset="1" stop-color="#009BDE" stop-opacity="0.7"/></linearGradient></defs></svg>
+
+                            .logo__text.footer-logo__text РАДИОЛОГИЯ <br> МОСКВЫ
+
+                        nav.footer__nav.footer-nav.nav.right
+                            a(class="nav__item footer-nav__item footer-nav__item_active" href="") ргп
+                            a(class="nav__item footer-nav__item" href="faq-1-doz.html") 1-ДОЗ
+                            a(class="nav__item footer-nav__item" href="") 3-ДОЗ
+                            a(class="nav__item footer-nav__item" href="contact.html") контакты
+                            a(class="nav__item footer-nav__item" href="") форма обратной связи
+
+                    .footer__copyright © 2019 ГБУЗ "Научно-практический клинический центр диагностики и телемедицинских технологий ДЗМ". Все права защищены.
+
+
+
+        .popbox(data-popbox-id="popbox-application-check")
+            .popbox__container(style="max-width:662px;")
+                button(class="popbox__cross" data-popbox-close="popbox-application-check")
+                    .icon.svg-wrap <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3 0.710001C12.91 0.320001 12.28 0.320001 11.89 0.710001L7 5.59L2.11 0.700001C1.72 0.310001 1.09 0.310001 0.700001 0.700001C0.310001 1.09 0.310001 1.72 0.700001 2.11L5.59 7L0.700001 11.89C0.310001 12.28 0.310001 12.91 0.700001 13.3C1.09 13.69 1.72 13.69 2.11 13.3L7 8.41L11.89 13.3C12.28 13.69 12.91 13.69 13.3 13.3C13.69 12.91 13.69 12.28 13.3 11.89L8.41 7L13.3 2.11C13.68 1.73 13.68 1.09 13.3 0.710001Z" fill="black"/></svg>
+
+                .popbox__content
+                    .ph-2.pt-3.text_center
+                        .title_h4.text_700 Проверьте точность
+                        .text.text_16-22.text_gray3.mt-15.mb-2 Проведите самостоятельную проверку, на точность вашего отчёта.
+                    .divider
+                    form.form.ph-2.pb-2#application-check-form(data-js="application-check-form")
+                        .form-field-wrap.mt-15
+                            label.form-field.checkbox.checkbox_type_1
+                                input.checkbox__input(type="checkbox" data-validate="checkbox" name="application-check-1")
+                                span.checkbox__text-wrap
+                                    span.checkbox__text.text.text_18-24 6 Раздел РАСЧЕТ не заполнен (таблицы 1000, 1100)
+                                span.checkbox__checkmark
+                            .form-field__help-block-list
+                        //.form-field-wrap.mt-15
+                        //    label.form-field.checkbox.checkbox_type_1
+                        //        input.checkbox__input(type="checkbox" data-validate="checkbox" name="application-check-2")
+                        //        span.checkbox__text-wrap
+                        //            span.checkbox__text.text.text_18-24 Был заполнен раздел Измерения (таблицы 2000, 2100)
+                        //        span.checkbox__checkmark
+                        //    .form-field__help-block-list
+                        //
+                        //.form-field-wrap.mt-15
+                        //    label.form-field.checkbox.checkbox_type_1
+                        //        input.checkbox__input(type="checkbox" data-validate="checkbox" name="application-check-3")
+                        //        span.checkbox__text-wrap
+                        //            span.checkbox__text.text.text_18-24 Был заполнен раздел Измерения (таблицы 2000, 2100)
+                        //        span.checkbox__checkmark
+                        //    .form-field__help-block-list
+
+                        button.btn.center.mt-4(style="font-size:16px;font-weight:500;text-transform:none") Спасибо за помощь
+
+
+
+
+        script(src="https://unpkg.com/accordion-js@3.0.0/dist/accordion.min.js")
+        script(src="https://www.google.com/recaptcha/api.js")
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js")
+        script(src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/js/tabby.polyfills.min.js")
+        script(src="https://unpkg.com/@popperjs/core@2")
+        script(src="https://unpkg.com/tippy.js@6")
+

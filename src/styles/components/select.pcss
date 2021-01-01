@@ -1,0 +1,133 @@
+.select_type_1 {
+    * {
+        --scrollbarBG: transparent;
+        --thumbBG: #999DA4;
+    }
+
+    *::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+        border-radius: 2px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 2px;
+    }
+
+    &_smaller.select_type_1 {
+        .ss-main {
+            .ss-single-selected {
+                padding: 0.8rem 0.63rem 0.8rem 0.63rem;
+            }
+        }
+    }
+
+    .ss-main {
+        color: $gray3;
+
+        .placeholder {
+            color: $black;
+
+            .ss-disabled {
+                color: $gray2;
+            }
+        }
+
+        .ss-single-selected,
+        .ss-multi-selected {
+            padding: 0.9375rem 1.125rem 0.9375rem 1.125rem;
+            height: auto;
+            border-radius: $border-radius-2;
+            border-color: $gray2;
+
+            &.ss-disabled {
+                background-color: #F5F6F8;
+                border-color: #F5F6F8;
+            }
+
+            &.ss-open-above,
+            &.ss-open-below {
+                border-radius: $border-radius-2 $border-radius-2 0 0;
+                border-color: $blue;
+            }
+
+            .ss-arrow {
+                margin: 0 3px 0 10px;
+
+                span {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+
+                    width: 9px;
+                    height: 7px;
+                    background: url("../images/icons/icon-triangle.svg");
+
+                    &.arrow-down {
+                        transform: rotate(0deg);
+                    }
+
+                    &.arrow-up {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .ss-multi-selected {
+            min-height: 45px;
+            padding: 0.4rem 0.5rem 0.4rem .5rem;
+
+            .ss-add {
+                margin: 0 0 0 8px;
+                padding: 11px 15px 11px 15px;
+                height: max-content;
+                background-color: $blue;
+                border-radius: 10px;
+
+                .ss-plus {
+                    &, &:after {
+                        background-color: $white;
+                    }
+                }
+            }
+
+            .ss-value .ss-value-delete {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .ss-content {
+        border-radius: 0 0 $border-radius-2 $border-radius-2;
+        border-color: $blue;
+
+        .ss-list {
+            border-radius: 0 0 $border-radius-2 $border-radius-2;
+
+            .ss-option {
+                padding: 0.97rem 0.75rem 0.97rem 0.75rem;
+                font-size: 0.875rem;
+                line-height: 1.14;
+
+                &:hover {
+                    background-color: #F2F6FC;
+                    color: $gray3;
+                }
+
+                &.ss-disabled {
+                    color: $gray3;
+                }
+            }
+        }
+    }
+}

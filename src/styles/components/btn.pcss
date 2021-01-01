@@ -1,0 +1,28 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: max-content;
+    padding: 13px 17px 12px 17px;
+    background-color: $yellow;
+    border-radius: 48px;
+    font-size: 17px;
+    font-weight: bold;
+    color: $black2;
+    letter-spacing: 0.036em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid $yellow;
+
+    &_w100 {
+        width: 100%;
+    }
+
+    &_disabled {
+        cursor: default;
+        pointer-events: none;
+        background-color: $gray2;
+        border-color: $gray2;
+    }
+}

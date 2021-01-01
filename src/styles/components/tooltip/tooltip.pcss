@@ -1,0 +1,97 @@
+@import "shift-away-animation.pcss";
+
+[data-js=tooltip-trigger] {
+    cursor: pointer;
+}
+
+[data-js=tooltip-trigger-2] {
+    cursor: default;
+}
+
+.tippy-box {
+    background: transparent;
+}
+
+.tippy-arrow {
+    z-index: 2;
+    color: #ffffff;
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+    top: -9px;
+    left: 0;
+    border-width: 0 14px 10px;
+}
+
+.tippy-content {
+    padding: 0;
+}
+
+.tooltip-content {
+    display: none;
+}
+
+.tooltip-content__content {
+    margin-top: 13px;
+    background: #FFFFFF;
+    border-radius: 0;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-content__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 11px 0 11px 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #454C50;
+    background: #F7F7F8;
+}
+
+.tooltip-content__btn:hover {
+    color: #454C50 !important;
+}
+
+.tooltip-nav-g {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 14px 0 0 0;
+}
+
+.tooltip-nav-g__i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 11px 27px 12px 27px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #454C50;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.tooltip-nav-g__i:hover {
+    background: #D7EDFF;
+    color: #454C50 !important;
+}
+

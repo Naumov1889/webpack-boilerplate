@@ -1,0 +1,118 @@
+.tab-title-g {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_1 {
+        margin: -16px -20px 0 -20px;
+
+        .tab-title-g__i {
+            margin: 16px 20px 0 20px;
+        }
+    }
+
+    &_2 {
+        margin: -10px -7px 0 -7px;
+
+        .tab-title-g__i {
+            margin: 10px 7px 0 7px;
+        }
+    }
+}
+
+.tab-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tab-title__text {
+        &[aria-selected=true] {
+            pointer-events: none;
+        }
+    }
+
+    &_1 {
+        .tab-title__text {
+            position: relative;
+            padding-bottom: 14px;
+            font-weight: 700;
+            color: $gray;
+
+            &[aria-selected=true] {
+                color: #000000;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    height: 3px;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+
+    &_2 {
+        height: 100%;
+
+        .tab-title__text {
+            padding: 0.95rem 1.6875rem 0.8rem 1.6875rem;
+            font-size: 1.0625rem;
+            font-weight: 500;
+            letter-spacing: 0.03rem;
+            color: $blue_light;
+            text-transform: uppercase;
+            border-radius: 5px;
+
+            &[aria-selected=true] {
+                font-weight: 700;
+                color: $blue_dark;
+                background: linear-gradient(360deg, #DBE6F6 -35.29%, #F0F6FF 113.97%);
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .tab-title-g {
+        display: flex;
+
+        &_1 {
+            margin: -16px -14px 0 -14px;
+
+            .tab-title-g__i {
+                margin: 16px 14px 0 14px;
+            }
+        }
+    }
+
+    .tab-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_1 {
+            .tab-title__text {
+                position: relative;
+                padding-bottom: 14px;
+                font-weight: 700;
+                color: $gray;
+
+                &[aria-selected=true] {
+                    color: #000000;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        height: 3px;
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

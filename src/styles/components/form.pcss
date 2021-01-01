@@ -1,0 +1,339 @@
+input, textarea {
+    width: 100%;
+    padding: 0.9375rem 1.125rem 0.9375rem 1.125rem;
+    resize: none;
+    border: 1px solid $gray2;
+    border-radius: $border-radius-2;
+    color: $black;
+    overflow: hidden;
+
+    &::placeholder {
+        color: $gray2;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $gray2;
+    }
+
+    &::-ms-input-placeholder {
+        color: $gray2;
+    }
+
+    &:focus {
+        border-color: $blue;
+    }
+
+    &[disabled],
+    &[readonly]:not(.datepicker__input) {
+        background: #F5F6F8;
+        border-color: #F5F6F8;
+        pointer-events: none;
+    }
+}
+
+a {
+    input {
+        color: $blue;
+    }
+}
+
+.form-field {
+    &__label {
+        display: inline-block;
+        margin: 1.125rem 0 8px 0;
+        font-size: 0.9375rem;
+        line-height: 1.06;
+
+        &_mt_2 {
+            margin-top: 1.875rem;
+        }
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+
+    &__help-block-list {
+        .help-block {
+            margin: 6px;
+            font-size: 12px;
+
+            &.error {
+                color: $red;
+            }
+        }
+    }
+}
+
+.form-field-wrap {
+    position: relative;
+
+    &_h100 {
+        height: 100%;
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            &__label {
+                width: max-content;
+            }
+
+            &__input-wrap {
+                height: 100%;
+            }
+
+            &__input {
+                flex-grow: 2;
+                height: 100%;
+            }
+        }
+    }
+
+    &_h2row {
+        .form-field__input {
+            min-height: 122px;
+        }
+    }
+
+    &__pass-vis-btn {
+        position: absolute;
+        right: 0.875rem;
+        bottom: 0.875rem;
+        width: 1.375rem;
+        height: 1.375rem;
+
+        svg {
+            fill: $gray;
+
+            &:hover {
+                fill: $blue;
+            }
+        }
+    }
+
+    &_error {
+        .form-field__input,
+        .ss-main .ss-single-selected {
+            border-color: $red;
+        }
+
+        .form-field__input-wrap,
+        .ss-single-selected {
+            &:before {
+                content: '*';
+                position: absolute;
+                right: 8px;
+                top: 5px;
+                font-size: 1.125rem;
+                line-height: 1.16;
+                color: $red;
+            }
+        }
+
+        .filebox__label {
+            background: #FCF7F7;
+            border-color: $red;
+        }
+
+        .form-text-n-file__padding {
+            border-color: $red !important;
+
+            input {
+                border: none;
+            }
+        }
+    }
+
+    &_success {
+        .form-field__input,
+        .ss-main .ss-single-selected {
+            border-color: $green;
+        }
+
+        .form-field__input {
+            border-color: $green;
+        }
+
+        .filebox__label {
+            background: linear-gradient(360deg, #EAF4EC -35.29%, #FFFFFF 113.97%);
+            border-color: $green2;
+        }
+
+        .form-text-n-file__padding {
+            border-color: $green !important;
+
+            input {
+                border: none;
+            }
+        }
+    }
+
+    &_with-small-filebox {
+        width: max-content;
+
+        .form-field-wrap__remove {
+            top: 15px;
+        }
+
+        &.form-field-wrap_success .filebox__label {
+            border-color: transparent !important;
+        }
+    }
+}
+
+.form {
+    &__title {
+        margin-bottom: 6px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $gray3;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+        line-height: 14px;
+        color: $gray;
+    }
+
+    &__required-symbol {
+        margin-left: 5px;
+        color: $blue;
+    }
+
+    &__title_lg {
+        margin-bottom: 8px;
+        font-size: 1.625rem;
+        line-height: 1.15;
+        color: $gray3;
+
+        .form__required-symbol {
+            font-size: 1.375rem;
+        }
+    }
+
+    &__subtitle_lg {
+        font-size: 1.125rem;
+        line-height: 1.16;
+        color: $gray;
+    }
+}
+
+.form_thirty-block {
+    display: none;
+}
+
+.btn-forget {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.036em;
+    text-transform: uppercase;
+    color: $blue;
+}
+
+.form-text-n-file {
+    position: relative;
+    display: flex;
+
+    &:first-child {
+        .form-text-n-file__remove {
+            display: none;
+        }
+    }
+
+    &__left {
+        width: 50%;
+
+        .form-text-n-file__padding {
+            height: 100%;
+            padding: 1rem 1.375rem 1rem 1.5rem;
+            border: 1px solid #428CFF;
+            border-right: none;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .form-field-wrap {
+            height: 6.75rem;
+        }
+    }
+
+    &__right {
+        width: 50%;
+
+        &, .filebox__label {
+            border-radius: 0 10px 10px 0 !important;
+        }
+    }
+
+    &__remove {
+        position: absolute;
+        right: -22px;
+        top: 46px;
+        width: 14px;
+        height: 14px;
+        opacity: 0.2;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.form-field-wrap {
+    &:first-child {
+        .form-field-wrap__remove {
+            display: none;
+        }
+    }
+
+    &__remove {
+        position: absolute;
+        right: -22px;
+        top: 46px;
+        width: 14px;
+        height: 14px;
+        opacity: 0.2;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .form-field-wrap {
+        &__remove {
+            top: 31px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .form-field {
+        &__label {
+            &_mt_2 {
+                margin-top: 1.125rem;
+            }
+        }
+    }
+
+    .form-field-wrap {
+        &__remove {
+            top: 27px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .g-recaptcha {
+        transform: scale(0.8);
+        transform-origin: left;
+    }
+}
+
