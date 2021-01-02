@@ -9,22 +9,6 @@ on('click', '[data-js=header-burger]', (e) => {
   document.querySelector('body').classList.toggle('body_fixed');
 });
 
-on('change', '[data-js-org_type]', (e) => {
-  const { value } = e.target;
-  const isFormThirty = orgTypes[parseInt(value)];
-  if (isFormThirty === 'True') {
-    document.querySelector('[data-js=form_thirty_true]').checked = true;
-    document.querySelector('[data-js=form_thirty-block]').style.display = 'none';
-  } else if (isFormThirty === 'False') {
-    document.querySelector('[data-js=form_thirty_false]').checked = true;
-    document.querySelector('[data-js=form_thirty-block]').style.display = 'none';
-  } else {
-    document.querySelector('[data-js=form_thirty_true]').checked = false;
-    document.querySelector('[data-js=form_thirty_false]').checked = false;
-    document.querySelector('[data-js=form_thirty-block]').style.display = 'block';
-  }
-});
-
 document.querySelectorAll('textarea').forEach((textarea) => {
   autosizeTextarea(textarea);
 });
@@ -35,10 +19,10 @@ on('keydown', 'textarea', (e) => {
 
 on('change', '[data-js=form-update-on-change] *', (e) => {
   const elem = e.target;
-  const should_hold = elem.getAttribute('data-form-update-on-change-hold');
-  if (should_hold && getInputValue(elem)) {
+  const shouldHold = elem.getAttribute('data-form-update-on-change-hold');
+  if (shouldHold && getInputValue(elem)) {
     return;
   }
   const form = elem.closest('[data-js=form-update-on-change]');
   form.submit();
-})
+});

@@ -1,9 +1,7 @@
 import 'lightgallery.js';
 import SlimSelect from 'slim-select';
-import flatpickr from "flatpickr";
-import { Russian } from "flatpickr/dist/l10n/ru.js"
-import rangePlugin from "flatpickr/dist/plugins/rangePlugin.js"
-import { on } from 'delegated-events';
+import flatpickr from 'flatpickr';
+import { Russian } from 'flatpickr/dist/l10n/ru.js';
 import Popbox from './modal';
 
 if (document.querySelector('.ac-list')) {
@@ -128,14 +126,14 @@ if (document.querySelector('#place-s-map-container')) {
   });
 }
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
   if (document.querySelector('[data-tabs]')) {
     const tabList = document.querySelectorAll('[data-tabs]');
     if (tabList) {
       tabList.forEach((tabs, i) => {
         tabs.setAttribute('data-tabs', i);
         // eslint-disable-next-line no-undef
-        let tabsObj = Tabby(`[data-tabs="${i}"]`);
+        const tabsObj = Tabby(`[data-tabs="${i}"]`);
 
         // if no default specified then activate the first tab
         if (!tabs.querySelector('[data-tabby-default]')) {
@@ -144,7 +142,7 @@ window.addEventListener('load', function () {
       });
     }
   }
-})
+});
 
 document.querySelectorAll('[data-js=thumb-gallery]').forEach((thumbGallery) => {
   lightGallery(thumbGallery, {
@@ -159,29 +157,29 @@ document.querySelectorAll('[data-js=thumb-gallery]').forEach((thumbGallery) => {
 
 export const popbox = new Popbox();
 
-let tooltip_triggers = document.querySelectorAll('[data-js=tooltip-trigger]');
-tooltip_triggers.forEach(tooltip_trigger => {
-    let template = tooltip_trigger.querySelector('[data-js=tooltip-content]');
-    tippy(tooltip_trigger, {
-        content: template.innerHTML,
-        allowHTML: true,
-        placement: 'bottom-end',
-        animation: 'shift-away',
-        trigger: 'click',
-        interactive: true
-    });
-})
+const tooltip_triggers = document.querySelectorAll('[data-js=tooltip-trigger]');
+tooltip_triggers.forEach((tooltip_trigger) => {
+  const template = tooltip_trigger.querySelector('[data-js=tooltip-content]');
+  tippy(tooltip_trigger, {
+    content: template.innerHTML,
+    allowHTML: true,
+    placement: 'bottom-end',
+    animation: 'shift-away',
+    trigger: 'click',
+    interactive: true,
+  });
+});
 
 flatpickr.localize(Russian);
-let datepickers = document.querySelectorAll('[data-js=datepicker_1]');
-datepickers.forEach(datepicker => {
+const datepickers = document.querySelectorAll('[data-js=datepicker_1]');
+datepickers.forEach((datepicker) => {
   flatpickr(datepicker, {
     appendTo: datepicker.closest('.datepicker_1'),
-    dateFormat: "d.m.Y",
-    maxDate: "today",
+    dateFormat: 'd.m.Y',
+    maxDate: 'today',
     defaultDate: datepicker.getAttribute('data-default'),
-    "locale": {
-      "firstDayOfWeek": 1 // start week on Monday
+    locale: {
+      firstDayOfWeek: 1, // start week on Monday
     },
   });
 });

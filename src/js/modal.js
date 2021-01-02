@@ -1,3 +1,4 @@
+/* eslint-disable */
 class Popbox{
 	constructor(config = {blur:false}){
 		this.currently_opened = [];

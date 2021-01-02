@@ -1,7 +1,6 @@
 import { validate } from 'validate.js';
 import removeInnerHtml from '../helpers/dom';
 import getInputValue from '../helpers/get_form_value';
-import { clearFormFileBlock } from '../ticket/helpers';
 import constraints from './constraints';
 
 export function resetFormGroup(formGroup) {
@@ -15,7 +14,6 @@ export function resetForm(form) {
   const formGroups = form.querySelectorAll('.form-field-wrap');
   formGroups.forEach((formGroup) => {
     resetFormGroup(formGroup);
-    clearFormFileBlock(formGroup);
   });
 }
 
